@@ -194,7 +194,7 @@ def read(file, readmarkers=False, readmarkerlabels=False, readmarkerslist=False,
                 cuepointid, type, start, end, fraction, playcount = struct.unpack('<iiiiii', str1) 
                 loops.append([start, end])
         else:
-            warnings.warn("Chunk " + chunk_id + " skipped", WavFileWarning)
+            warnings.warn("Chunk " + str(chunk_id) + " skipped", WavFileWarning)
             _skip_unknown_chunk(fid)
     fid.close()
 
